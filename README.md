@@ -2,7 +2,7 @@
 
 <h2>Description</h2>
 
-Understanding the basic concepts related to XML, exploring XML External Entity (XXE) and its components and learning how to exploit and remediate the vulnerability.
+Understanding the basic concepts related to **XML**, exploring **XML External Entity (XXE)** and its components and learning how to exploit and remediate the vulnerability.
 
 
 <h2>Languages and Utilities Used</h2>
@@ -13,19 +13,19 @@ Understanding the basic concepts related to XML, exploring XML External Entity (
 
 <h2>Task with in-depth breakdown</h2>
 
-XML is a file format and markup language that allows users to store, share, and exchange data. It organises data in tabs and can be visualised as files in a filing cabinet.
+**XML** is a file format and markup language that allows users to store, share, and exchange data. It organises data in tabs and can be visualised as files in a filing cabinet.
 
 <img src="https://i.imgur.com/YHGokdN.png" alt="XML"/>
 
-DTD = Document Type Definition: defines structure for XML such as data types, elements for servers to communicate with one another: 
+**DTD = Document Type Definition:** defines structure for XML such as data types, elements for servers to communicate with one another: 
 
 <img src="https://i.imgur.com/Hdyl9fP.png" alt="DTD"/>
 
-In the above DTD, <!ELEMENT>  defines the elements (tags) that are allowed, like name, address, email, and phone, whereas #PCDATA stands for parsed people data, meaning it will consist of just plain text.
+In the above **DTD**, <!ELEMENT>  defines the elements (tags) that are allowed, like name, address, email, and phone, whereas **#PCDATA** stands for parsed people data, meaning it will consist of just plain text.
 
 External refs are bad most of the time: an external entity references data from an external file or resource. In the following code, the entity &thmFile; in this case opens the passwd file which would load a list of the system’s accounts. Another thing it could also do (not used as example in screenshot) is refer to an external file located e.g. at "http://tryhackme.com/robots.txt", which would be loaded into the XML, if allowed by the system:
 
-XXE is an attack that takes advantage of how XML parsers handle external entities. When a web application processes an XML file that contains an external entity, the parser attempts to load or execute whatever resource the entity points to, shown below:
+**XXE** is an attack that takes advantage of how XML parsers handle external entities. When a web application processes an XML file that contains an external entity, the parser attempts to load or execute whatever resource the entity points to, shown below:
 
 <img src="https://i.imgur.com/vB6wdvC.png" alt="External refs"/>
 
