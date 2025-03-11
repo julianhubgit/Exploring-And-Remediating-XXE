@@ -1,4 +1,4 @@
-# Exploring-And-Remediating-XXE
+# Exploring-And-Remediating-XXE-Using-Burpsuite
 
 <h2>Description</h2>
 
